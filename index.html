@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anitha P | Portfolio</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(-45deg,#0f0a1f,#1a103d,#3b0764,#581c87);
+background-size:400% 400%;
+animation:gradient 10s ease infinite;
+color:white;
+overflow-x:hidden;
+}
+
+@keyframes gradient{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(0,0,0,0.2);
+backdrop-filter:blur(12px);
+padding:15px;
+text-align:center;
+z-index:1000;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:15px;
+font-weight:bold;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:4rem;
+color:#d8b4fe;
+text-shadow:0 0 20px #c084fc;
+}
+
+.hero h2{
+margin-top:10px;
+font-size:1.5rem;
+}
+
+.hero p{
+max-width:700px;
+margin-top:15px;
+}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:12px 25px;
+background:#9333ea;
+border-radius:10px;
+text-decoration:none;
+color:white;
+}
+
+section{
+padding:80px 10%;
+}
+
+.title{
+text-align:center;
+margin-bottom:30px;
+color:#d8b4fe;
+}
+
+.card{
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(12px);
+padding:25px;
+border-radius:20px;
+margin-top:20px;
+border:1px solid rgba(255,255,255,0.1);
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:15px;
+justify-content:center;
+}
+
+.skill{
+background:#7c3aed;
+padding:10px 18px;
+border-radius:25px;
+}
+
+footer{
+padding:25px;
+text-align:center;
+background:rgba(0,0,0,0.2);
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#education">Education</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section class="hero">
+<h1>ANITHA P</h1>
+<h2 id="typing"></h2>
+
+<p>
+Final Year B.Tech Artificial Intelligence and Data Science Student at NPR College of Engineering and Technology.
+</p>
+
+<a href="#contact" class="btn">Contact Me</a>
+</section>
+
+<section id="about">
+<h2 class="title">About Me</h2>
+
+<div class="card">
+I am a Final Year B.Tech Artificial Intelligence and Data Science student passionate about AI, Machine Learning, NLP, Data Science and Software Development. I enjoy building intelligent solutions that solve real-world problems.
+</div>
+</section>
+
+<section id="skills">
+<h2 class="title">Skills</h2>
+
+<div class="skills">
+<div class="skill">Python</div>
+<div class="skill">JavaScript</div>
+<div class="skill">HTML</div>
+<div class="skill">GitHub</div>
+<div class="skill">FlutterFlow</div>
+<div class="skill">Machine Learning</div>
+<div class="skill">NLP</div>
+<div class="skill">Data Science</div>
+</div>
+</section>
+
+<section id="projects">
+<h2 class="title">Projects</h2>
+
+<div class="card">
+<h3>Fake Review Detection Using NLP and Machine Learning</h3>
+<br>
+<p>
+Developed a system to classify online reviews as fake or genuine using NLP techniques and Machine Learning algorithms including BERT and Naive Bayes.
+</p>
+</div>
+
+<div class="card">
+<h3>InterviewLens AI App</h3>
+<br>
+<p>
+AI-powered interview preparation application developed using FlutterFlow.
+</p>
+</div>
+</section>
+
+<section id="education">
+<h2 class="title">Education</h2>
+
+<div class="card">
+<h3>B.Tech Artificial Intelligence and Data Science</h3>
+<p>NPR College of Engineering and Technology</p>
+<p>CGPA: 7.8</p>
+<p>Final Year Student</p>
+</div>
+
+<div class="card">
+<h3>Certifications & Internship</h3>
+<ul>
+<li>NPTEL Certification</li>
+<li>iHub Certification</li>
+<li>Internship at Virtual Technologies</li>
+</ul>
+</div>
+</section>
+
+<section id="contact">
+<h2 class="title">Contact</h2>
+
+<div class="card">
+<p>Email: anitha212348@gmail.com</p>
+<p>Phone: +91 9345903966</p>
+<p>LinkedIn: <a style="color:#d8b4fe;" href="https://www.linkedin.com/in/anitha-p-b2207529a" target="_blank">View Profile</a></p>
+<p>GitHub: <a style="color:#d8b4fe;" href="https://github.com/anitha21234" target="_blank">anitha21234</a></p>
+</div>
+</section>
+
+<footer>
+<p>© 2026 ANITHA P | AI & Data Science Portfolio</p>
+</footer>
+
+<script>
+const text="AI & Data Science Student";
+let i=0;
+
+function type(){
+if(i<text.length){
+document.getElementById("typing").innerHTML+=text.charAt(i);
+i++;
+setTimeout(type,100);
+}
+}
+type();
+</script>
+
+</body>
+</html>
